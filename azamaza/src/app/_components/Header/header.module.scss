@@ -106,12 +106,14 @@
   padding: 0;
   margin: 0;
 
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
   &:hover {
     background: #f0f0f0;
   }
 }
-
-
 
 .menuOverlay {
   position: absolute;

@@ -3,13 +3,13 @@
   padding-left: 16px;
   padding-right: 16px;
 
-  //@media (min-width: $media-tab-sm) {
-  //  padding-left: 40px;
-  //  padding-right: 40px;
-  //}
-  //
-  //@media (min-width: $media-des-md) {
-  //  padding-left: calc((100% - 1104px) / 2);
-  //  padding-right: calc((100% - 1104px) / 2);
-  //}
+  @media (min-width: 768px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: calc((100% - 1104px) / 2);
+    padding-right: calc((100% - 1104px) / 2);
+  }
 }

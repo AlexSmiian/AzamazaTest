@@ -24,6 +24,7 @@ body {
     position: relative;
     color: #2a3950;
     margin: 0;
+    overflow-x: hidden;
 }
 
 body {
