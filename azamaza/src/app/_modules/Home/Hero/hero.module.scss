@@ -1,10 +1,12 @@
+@use '../../../_assets/vars' as *;
+
 .hero {
   position: relative;
   padding-top: 40px;
   padding-bottom: 40px;
 
   .title {
-    color: #ffffff;
+    color: $white;
     position: relative;
     z-index: 1;
     text-align: center;

@@ -1,3 +1,4 @@
+@use '../../../_assets/vars' as *;
 
 .categoryPage {
   display: flex;
@@ -35,14 +36,14 @@
     align-items: center;
     justify-content: center;
     padding: 8px 12px;
-    background-color: yellowgreen;
+    background-color: Supernova;
     border: none;
     outline: none;
     border-radius: 100px;
     transition: background-color 0.3s;
 
     &:active {
-      background-color: red;
+      background-color: $coral-red;
     }
   }
 }
