@@ -1,4 +1,4 @@
-export default async function LangLayout({
+export default function LangLayout({
                                              children,
                                          }: {
     children: React.ReactNode;
