@@ -40,7 +40,11 @@ export default function SearchForm() {
                         {...register("destination")}
                         className={styles.inputField}
                     />
-                    <button className={styles.buttonReset}  onClick={clearDestination}>
+                    <button
+                        type="button"
+                        className={styles.buttonReset}
+                        onClick={clearDestination}
+                    >
                         <Image
                             src={close}
                             alt="Clear destination"
@@ -48,7 +52,6 @@ export default function SearchForm() {
                             height={12}
                         />
                     </button>
-
                     {errors.destination && (
                         <span className={styles.error}>{errors.destination.message}</span>
                     )}
