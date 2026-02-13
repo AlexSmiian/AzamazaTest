@@ -1,0 +1,60 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.categoriesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.categoryButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  border-radius: 9999px;
+  background-color: #fff;
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+  }
+
+  &.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+}
+
+.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.icon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.label {
+  display: inline-block;
+}

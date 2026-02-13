@@ -1,0 +1,114 @@
+.form {
+  border: none;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #155DFC;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.inputGroupLabel {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  width: 100%;
+  position: relative;
+}
+
+.inputField {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.inputFieldDate {
+  padding: 8px 40px 8px 8px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  width: 100%;
+  background-color: #fff;
+  cursor: pointer;
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  &::-moz-calendar-picker-indicator {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+.dropdownList {
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  top: 58px;
+  left: 0;
+  z-index: 1000;
+}
+
+.dropdownItem {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: #eee;
+}
+
+.arrow {
+  transform: rotate(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow.active {
+  transform: rotate(180deg);
+}
+
+.submitButton {
+  background-color: #ffdd00;
+  border: none;
+  padding: 12px 40px;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.submitButton:hover {
+  opacity: 0.9;
+}

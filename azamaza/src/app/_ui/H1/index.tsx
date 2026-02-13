@@ -1,13 +1,13 @@
 import cln from 'classnames';
 import styles from './h1.module.scss';
 
-type H2Props = {
+type H1Props = {
   children?: React.ReactNode;
   classModifier?: string;
   html?: string;
 };
 
-export default function H2({ children, classModifier, html }: H2Props) {
+export default function H1({ children, classModifier, html }: H1Props) {
   if (html) {
     return (
       <h1
