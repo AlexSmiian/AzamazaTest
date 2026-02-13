@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build",
+    "deploy": "next build && gh-pages -d out",
     "start": "next start",
     "lint": "eslint"
   },
@@ -19,6 +21,7 @@
     "yup": "^1.7.1",
     "zod": "^4.3.6"
   },
+  "homepage": "https://AlexSmiian.github.io/azamaza",
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^19",
@@ -26,6 +29,7 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "gh-pages": "^6.3.0",
     "typescript": "^5"
   }
 }
