@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useEffect, useRef, useState } from "react";
-import {fakeFetch} from "@/app/_utils/fakeFetch";
+import { fakeFetch } from "@/app/_utils/fakeFetch";
 
 const searchSchemaZod = z.object({
     destination: z.string().min(1, "Destination is required"),
@@ -38,9 +38,15 @@ export function useSearchForm() {
         setValue,
         reset,
         watch,
+        control,
     } = useForm<SearchFormData>({
         resolver: zodResolver(searchSchemaZod),
         mode: "onSubmit",
+        defaultValues: {
+            destination: "",
+            category: "",
+            date: "",
+        },
     });
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -91,9 +97,8 @@ export function useSearchForm() {
         }
     };
 
-    const selectCategory = (cat: string) => {
-        setValue("category", cat, { shouldValidate: true });
-        setDropdownOpen(false);
+    const clearDestination = () => {
+        setValue("destination", "", { shouldValidate: false });
     };
 
     return {
@@ -101,13 +106,14 @@ export function useSearchForm() {
         handleSubmit,
         errors,
         watch,
+        control,
         dropdownOpen,
         setDropdownOpen,
         categoryRef,
         dateInputRef,
         categories,
         onSubmit,
-        selectCategory,
         loading,
+        clearDestination,
     };
 }
