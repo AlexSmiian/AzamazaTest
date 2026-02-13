@@ -12,6 +12,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
 }
 
 .logo {
@@ -21,11 +25,20 @@
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 }
 
 .logoIcon {
   width: 32px;
   height: 32px;
+
+  @media (max-width: 480px) {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .logoText {
@@ -39,7 +52,7 @@
   border-radius: 24px;
   padding: 12px 24px;
   font-weight: 600;
-  font-size: 12rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -52,6 +65,10 @@
 
   &:active {
     transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 
@@ -94,42 +111,7 @@
   }
 }
 
-.menuIcon {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: 20px;
 
-  span {
-    width: 100%;
-    height: 2px;
-    background: #0066FF;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-}
-
-.sideMenu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-  z-index: 9999;
-
-  &.open {
-    visibility: visible;
-
-    .menuOverlay {
-      opacity: 1;
-    }
-
-    .menuContent {
-      transform: translateX(0);
-    }
-  }
-}
 
 .menuOverlay {
   position: absolute;
@@ -140,139 +122,4 @@
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-
-.menuContent {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  max-width: 380px;
-  background: white;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  overflow-y: auto;
-  padding: 32px 0;
-  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
-}
-
-.menuItem {
-  display: flex;
-  align-items: center;
-  padding: 16px 24px;
-  gap: 16px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  position: relative;
-
-  &:hover {
-    background: #f5f5f5;
-  }
-
-  .menuIcon {
-    font-size: 1.5rem;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .menuText {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menuTitle {
-    color: #4169E1;
-    font-weight: 500;
-    font-size: 1.4rem;
-  }
-
-  .menuSubtitle {
-    color: #999;
-    font-size: 1.2rem;
-    margin-top: 8px;
-  }
-
-  .menuArrow {
-    color: #ccc;
-    font-size: 1.5rem;
-  }
-
-  .badge {
-    background: #FF4444;
-    color: white;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 16px;
-  }
-
-  .memberButton {
-    display: none;
-  }
-
-  .menuContent {
-    max-width: 320px;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    font-size: 1.2rem;
-  }
-
-  .logoIcon {
-    width: 28px;
-    height: 28px;
-  }
-
-  .menuContent {
-    max-width: 100%;
-  }
-}
-
-.closeButton {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #666;
-  transition: all 0.2s ease;
-  z-index: 10;
-
-  &:hover {
-    background: #f5f5f5;
-    color: #333;
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
-
-  svg {
-    width: 24px;
-    height: 24px;
-  }
 }
